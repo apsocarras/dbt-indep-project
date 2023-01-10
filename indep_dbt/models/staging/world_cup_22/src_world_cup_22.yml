@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: world_cup_22
+    description: 'BQ Dataset (Schema) containing data from Kaggle on World Cup 2022.'
+    database: 'dbt-indep-project'
+    schema: 'world_cup_22'
+    tables:
+      - name: attendance
+        description: "Crowd attendance and other details per game"
+        columns: 
+          - name: Date
+          - name: Time
+          - name: Home
+          - name: Away
+          - name: Attendance
+          - name: Venue  
+          
+      - name: tweets
+        description: "Tweets containing the hashtag #QatarWorldCup2022"
+        columns: 
+          - name: user_name
+          - name: user_location
+          - name: user_description
+          - name: user_created
+          - name: user_followers
+          - name: user_friends  
+          - name: user_favorites
+          - name: user_verified
+          - name: date
+          - name: text
+          - name: hashtag
+          - name: source
